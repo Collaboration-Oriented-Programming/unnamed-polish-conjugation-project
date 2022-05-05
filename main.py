@@ -1,5 +1,5 @@
 class ConjugatedWord:
-	_root: str
+	_root_word: str
 	_mianownik: str
 	_dopełniacz: str
 	_celownik: str
@@ -10,13 +10,13 @@ class ConjugatedWord:
 
 	def set_conjugations(self, root_word):
 		# Call an api or scrape a website for the other fields
-		self._root = root_word
+		self._root_word = root_word
 
 	def __init__(self, root_word):
 		self.set_conjugations(root_word)
 
 	def display(self):
-		print('Word:', self._root)
+		print('Word:', self._root_word)
 		print('!Not yet implemented!')
 
 
