@@ -8,12 +8,12 @@ class ConjugatedWord:
 	_miejscownik: str
 	_wołacz: str
 
-	def set_conjugations(self, root):
+	def set_conjugations(self, root_word):
 		# Call an api or scrape a website for the other fields
-		self._root = root
+		self._root = root_word
 
-	def __init__(self, root):
-		self.set_conjugations(root)
+	def __init__(self, root_word):
+		self.set_conjugations(root_word)
 
 	def display(self):
 		print('Word:', self._root)
@@ -21,7 +21,7 @@ class ConjugatedWord:
 
 
 def main():
-	input_string = input('Please enter word to be conjugated\n')
+	input_string = input('Please enter word to be conjugated:\n')
 	conjugated = ConjugatedWord(input_string)
 	conjugated.display()
 
